@@ -15,10 +15,13 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
 
+            - run: pwd
+
             - name: Run Qodana Configuration Uploader
               env:
                   QODANA_CONFIGURATIONS_TOKEN: ${{ secrets.QODANA_CONFIGURATIONS_TOKEN }}
                   QODANA_ENDPOINT: 'https://qodana.cloud'
+
               run: |
                   docker run --rm \
                     -v $(pwd):/workspace \
