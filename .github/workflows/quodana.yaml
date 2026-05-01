@@ -9,6 +9,7 @@ on:
 
 jobs:
     upload-qodana-config:
+        if: false
         runs-on: ubuntu-latest
 
         steps:
